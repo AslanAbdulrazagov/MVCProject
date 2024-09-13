@@ -1,0 +1,31 @@
+﻿@using MVCProject.DataAccessLayer.Models
+@model List<Student>
+<div class="card">
+    <h5 class="card-header">Table Basic</h5>
+    <div class="table-responsive text-nowrap">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                 
+                </tr>
+            </thead>
+            <tbody class="table-border-bottom-0">
+                @foreach (var student in Model)
+                {
+                    <tr>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>@student.Name</strong></td>
+                        <td>@student.Age</td>
+                        <td>@student.Grade</td>
+
+                    </tr>
+                    
+                }
+               
+                
+            </tbody>
+        </table>
+    </div>
+</div>
